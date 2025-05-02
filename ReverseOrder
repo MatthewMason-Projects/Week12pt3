@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Stack<int> stack = new Stack<int>();
+        Console.Write("Enter the number of integers: ");
+        int n = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter the integers:");
+        for (int i = 0; i < n; i++)
+        {
+            int number = int.Parse(Console.ReadLine());
+            stack.Push(number);
+        }
+
+        Console.WriteLine("Reversed order:");
+        while (stack.Count > 0)
+        {
+            Console.WriteLine(stack.Pop());
+        }
+    }
+}
