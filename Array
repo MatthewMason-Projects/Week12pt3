@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        int[] array = { 3, 4, 4, 2, 3, 3, 4, 3, 2 };
+        Dictionary<int, int> counts = new Dictionary<int, int>();
+
+        foreach (int number in array)
+        {
+            if (!counts.ContainsKey(number))
+                counts[number] = 0;
+            counts[number]++;
+        }
+
+        foreach (var pair in counts)
+        {
+            Console.WriteLine($"{pair.Key}: {pair.Value} times");
+        }
+    }
+}
